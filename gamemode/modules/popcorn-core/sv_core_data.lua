@@ -297,6 +297,10 @@ hook.Add("DarkRPDBInitialized", "Manolis:Popcorn:InitDatabaseTables", function()
 	  `level` int(11) NOT NULL,
 	  `xp` int(11) NOT NULL
 	);]])
+		
+	MySQLite.query([[
+		ALTER TABLE manolis_popcorn_levels ADD PRIMARY KEY (`uid`);
+	]])
 
 
 	MySQLite.query([[CREATE TABLE IF NOT EXISTS `manolis_popcorn_positions` (
